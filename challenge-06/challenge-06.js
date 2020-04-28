@@ -38,11 +38,13 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 
 function showTeamPosition ( number ) {  
-  if( !teams[number] ){
+  var index = number - 1;  
+
+  if( !teams[index] ){
     return  "Não temos a informação do time que está nessa posição"; 
   }
 
-  return `O time que está em ${number}º lugar é o ${teams[number] - 1}`;
+  return `O time que está em ${number}º lugar é o ${teams[index]}`;
 }
 
 /*
@@ -55,19 +57,17 @@ showTeamPosition(1);
 showTeamPosition(2);
 showTeamPosition(3);
 showTeamPosition(4);
-showTeamPosition(5);
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
 
-var count = 19;
+var count = 20;
 
-while(count <= 29 ){  
-  count++
+while(count <= 30 ){  
 
-  console.log(count)
+  console.log(count++)
 }
 
 /*
@@ -87,29 +87,31 @@ function convertToHex (cor) {
   
   switch( cor ){
     'Verde':
-       return `O hexadecimal para a cor ${cor} é #2ad200.`;
-     break;
-    
+       hexa = '#2ad200';
+     break;  
+        
     'Azul':
-       return `O hexadecimal para a cor ${cor} é #549dff.`;
+       hexa = '#549dff';
      break;	
   
     'Vermelho':
-       return `O hexadecimal para a cor ${cor} é #e60300.`;
+       hexa = '#e60300';
      break;
     
     'Amarelo':
-       return `O hexadecimal para a cor ${cor} é #fff50b.`;
+       hexa = '#fff50b';
      break;
   
     'Roxo':
-       return `O hexadecimal para a cor ${cor} é #d23bff.`;
+       hexa = '#d23bff';
      break;    
     
     default:
       return `Não temos o equivalente hexadecimal para ${cor}.`;
     break;
   }
+
+    return `O hexadecimal para a cor ${cor} é ${hexa}.`;
 }
 
 /*
