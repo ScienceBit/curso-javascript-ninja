@@ -119,4 +119,4 @@ cor('Verde');
 cor('Azul');
 cor('Vermelho');
 cor('Amarelo');
-cor('Roxo');
+cor('Roxo');:
