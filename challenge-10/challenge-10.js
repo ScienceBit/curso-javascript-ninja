@@ -26,11 +26,11 @@
   propriedade, usando os valores passados por parâmetro.
   */
   var operation = {
-	'+' : function(x,y){return x + y;},
-	'-' : function(x,y){return x - y;},
-	'*' : function(x,y){return x * y;},
-	'/' : function(x,y){return x / y;},
-	'%' : function(x,y){return x % y;},
+    '+' : function(x,y){return x + y;},
+    '-' : function(x,y){return x - y;},
+    '*' : function(x,y){return x * y;},
+    '/' : function(x,y){return x / y;},
+    '%' : function(x,y){return x % y;},
   };
 
   /*
@@ -79,7 +79,7 @@
   */
   function showOperationMessage(oper, x, y)
   {
-   return `A operação ${x} ${oper} ${y} =`;
+    return `A operação ${x} ${oper} ${y} =`;
   }
 
   /*
