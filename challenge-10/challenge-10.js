@@ -26,11 +26,11 @@
   propriedade, usando os valores passados por parâmetro.
   */
   var operation = {
-	'+' : function(x,y){return x + y;},
-	'-' : function(x,y){return x - y;},
-	'*' : function(x,y){return x * y;},
-	'/' : function(x,y){return x / y;},
-	'%' : function(x,y){return x % y;},
+    '+' : function(x,y){return x + y;},
+    '-' : function(x,y){return x - y;},
+    '*' : function(x,y){return x * y;},
+    '/' : function(x,y){return x / y;},
+    '%' : function(x,y){return x % y;},
   };
 
   /*
@@ -62,12 +62,19 @@
   */
   function calculator(oper)
   {
-   if(!isOperatorValid(oper)){ return false; }
+    if(!isOperatorValid(oper)){ return false; }
 
+<<<<<<< HEAD
    return function(x, y)
    {
      return typeof x !== 'number' || typeof y !== 'number' ? false : operation[oper](x, y);
    }
+=======
+    return function(x, y)
+    {
+      return typeof x !== 'number' && typeof y !== 'number' ? false : operation[oper](x, y);
+    }
+>>>>>>> 80e18ac256c7e8564fccc02c9fa8d24855f25e24
   }
 
   /*
@@ -79,7 +86,7 @@
   */
   function showOperationMessage(oper, x, y)
   {
-   return `A operação ${x} ${oper} ${y} =`;
+    return `A operação ${x} ${oper} ${y} =`;
   }
 
   /*
@@ -124,13 +131,13 @@
   */
   if(sum)
   {
-   number1 = 10;
-   number2 = 2;
-   console.log(showOperationMessage(operationSignal, number1, number2), sum(number1, number2));
+     number1 = 10;
+     number2 = 2;
+     console.log(showOperationMessage(operationSignal, number1, number2), sum(number1, number2));
   }
   else
   {
-   console.log(showErrorMenssage(operationSignal));
+     console.log(showErrorMenssage(operationSignal));
   }
 
   /*
@@ -143,13 +150,13 @@
 
   if(subtraction)
   {
-   number1 = 10;
-   number2 = 2;
-   console.log(showOperationMessage(operationSignal, number1, number2), subtraction(number1, number2));
+     number1 = 10;
+     number2 = 2;
+     console.log(showOperationMessage(operationSignal, number1, number2), subtraction(number1, number2));
   }
   else
   {
-   console.log(showErrorMessage(operationSignal));
+     console.log(showErrorMessage(operationSignal));
   }
 
   operationSignal = '*';
@@ -157,13 +164,13 @@
 
   if(multiplication)
   {
-   number1 = 10;
-   number2 = 2;
-   console.log(showOperationMessage(operationSignal, number1, number2), multiplication(number1, number2));
+     number1 = 10;
+     number2 = 2;
+     console.log(showOperationMessage(operationSignal, number1, number2), multiplication(number1, number2));
   }
   else
   {
-   console.log(showErrorMessage(operationSignal));
+     console.log(showErrorMessage(operationSignal));
   }
 
   operationSignal = '/';
@@ -171,13 +178,13 @@
 
   if(division)
   {
-   number1 = 10;
-   number2 = 2;
-   console.log(showOperationMessage(operationSignal, number1, number2), division(number1, number2));
+     number1 = 10;
+     number2 = 2;
+     console.log(showOperationMessage(operationSignal, number1, number2), division(number1, number2));
   }
   else
   {
-   console.log(showErrorMenssage(operationSignal));
+     console.log(showErrorMenssage(operationSignal));
   }
 
   operationSignal = '%';
@@ -185,13 +192,13 @@
 
   if(mod)
   {
-   number1 = 10;
-   number2 = 2;
-   console.log(showOperationMessage(operationSignal, number1, number2), mod(number1, number2));
+     number1 = 10;
+     number2 = 2;
+     console.log(showOperationMessage(operationSignal, number1, number2), mod(number1, number2));
   }
   else
   {
-   console.log(showErrorMessage(operationSignal));
+     console.log(showErrorMessage(operationSignal));
   }
 
   /*
@@ -203,7 +210,7 @@
 
   if(!invalid)
   {
-    console.log(showErrorMessage(operationSignal));
+     console.log(showErrorMessage(operationSignal));
   }
 
 }());
