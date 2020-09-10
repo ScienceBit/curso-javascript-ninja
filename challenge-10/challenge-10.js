@@ -66,7 +66,7 @@
 
    return function(x, y)
    {
-     return typeof x !== 'number' && typeof y !== 'number' ? false : operation[oper](x, y);
+     return typeof x !== 'number' || typeof y !== 'number' ? false : operation[oper](x, y);
    }
   }
 
