@@ -64,17 +64,10 @@
   {
     if(!isOperatorValid(oper)){ return false; }
 
-<<<<<<< HEAD
    return function(x, y)
    {
      return typeof x !== 'number' || typeof y !== 'number' ? false : operation[oper](x, y);
    }
-=======
-    return function(x, y)
-    {
-      return typeof x !== 'number' && typeof y !== 'number' ? false : operation[oper](x, y);
-    }
->>>>>>> 80e18ac256c7e8564fccc02c9fa8d24855f25e24
   }
 
   /*
